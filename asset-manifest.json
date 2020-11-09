@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/JohannesOster/icons-rollentest/static/css/main.4f45492b.chunk.css",
-    "main.js": "/JohannesOster/icons-rollentest/static/js/main.29915407.chunk.js",
-    "main.js.map": "/JohannesOster/icons-rollentest/static/js/main.29915407.chunk.js.map",
-    "runtime-main.js": "/JohannesOster/icons-rollentest/static/js/runtime-main.ea1aa291.js",
-    "runtime-main.js.map": "/JohannesOster/icons-rollentest/static/js/runtime-main.ea1aa291.js.map",
-    "static/js/2.e557c619.chunk.js": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js",
-    "static/js/2.e557c619.chunk.js.map": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js.map",
-    "index.html": "/JohannesOster/icons-rollentest/index.html",
-    "static/css/main.4f45492b.chunk.css.map": "/JohannesOster/icons-rollentest/static/css/main.4f45492b.chunk.css.map",
-    "static/js/2.e557c619.chunk.js.LICENSE.txt": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js.LICENSE.txt"
+    "main.css": "/icons-rollentest/static/css/main.4f45492b.chunk.css",
+    "main.js": "/icons-rollentest/static/js/main.56747a72.chunk.js",
+    "main.js.map": "/icons-rollentest/static/js/main.56747a72.chunk.js.map",
+    "runtime-main.js": "/icons-rollentest/static/js/runtime-main.c9122c98.js",
+    "runtime-main.js.map": "/icons-rollentest/static/js/runtime-main.c9122c98.js.map",
+    "static/js/2.e557c619.chunk.js": "/icons-rollentest/static/js/2.e557c619.chunk.js",
+    "static/js/2.e557c619.chunk.js.map": "/icons-rollentest/static/js/2.e557c619.chunk.js.map",
+    "index.html": "/icons-rollentest/index.html",
+    "static/css/main.4f45492b.chunk.css.map": "/icons-rollentest/static/css/main.4f45492b.chunk.css.map",
+    "static/js/2.e557c619.chunk.js.LICENSE.txt": "/icons-rollentest/static/js/2.e557c619.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea1aa291.js",
+    "static/js/runtime-main.c9122c98.js",
     "static/js/2.e557c619.chunk.js",
     "static/css/main.4f45492b.chunk.css",
-    "static/js/main.29915407.chunk.js"
+    "static/js/main.56747a72.chunk.js"
   ]
 }
