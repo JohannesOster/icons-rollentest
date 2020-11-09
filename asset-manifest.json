@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/JohannesOster/icons-rollentest/static/css/main.4f45492b.chunk.css",
-    "main.js": "/JohannesOster/icons-rollentest/static/js/main.88ff5da1.chunk.js",
-    "main.js.map": "/JohannesOster/icons-rollentest/static/js/main.88ff5da1.chunk.js.map",
+    "main.js": "/JohannesOster/icons-rollentest/static/js/main.25e615c3.chunk.js",
+    "main.js.map": "/JohannesOster/icons-rollentest/static/js/main.25e615c3.chunk.js.map",
     "runtime-main.js": "/JohannesOster/icons-rollentest/static/js/runtime-main.ea1aa291.js",
     "runtime-main.js.map": "/JohannesOster/icons-rollentest/static/js/runtime-main.ea1aa291.js.map",
-    "static/js/2.7e6f99b6.chunk.js": "/JohannesOster/icons-rollentest/static/js/2.7e6f99b6.chunk.js",
-    "static/js/2.7e6f99b6.chunk.js.map": "/JohannesOster/icons-rollentest/static/js/2.7e6f99b6.chunk.js.map",
+    "static/js/2.e557c619.chunk.js": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js",
+    "static/js/2.e557c619.chunk.js.map": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js.map",
     "index.html": "/JohannesOster/icons-rollentest/index.html",
     "static/css/main.4f45492b.chunk.css.map": "/JohannesOster/icons-rollentest/static/css/main.4f45492b.chunk.css.map",
-    "static/js/2.7e6f99b6.chunk.js.LICENSE.txt": "/JohannesOster/icons-rollentest/static/js/2.7e6f99b6.chunk.js.LICENSE.txt"
+    "static/js/2.e557c619.chunk.js.LICENSE.txt": "/JohannesOster/icons-rollentest/static/js/2.e557c619.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ea1aa291.js",
-    "static/js/2.7e6f99b6.chunk.js",
+    "static/js/2.e557c619.chunk.js",
     "static/css/main.4f45492b.chunk.css",
-    "static/js/main.88ff5da1.chunk.js"
+    "static/js/main.25e615c3.chunk.js"
   ]
 }
