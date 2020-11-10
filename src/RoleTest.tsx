@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
 
 export const RoleTest = () => {
+  const [step, setStep] = useState<number>(0);
+  console.log(questions.questions.length, step);
   return (
     <main>
       <header>
@@ -36,17 +38,33 @@ export const RoleTest = () => {
         </p>
       </header>
       <hr />
-      <ul>
-        {questions.questions.map((question, index) => (
-          <li key={index}>
-            <Question
-              id={index.toString()}
-              question={question.description}
-              answers={question.answers}
-            />
-          </li>
-        ))}
-      </ul>
+      <Question
+        id={step.toString()}
+        question={questions.questions[step].description}
+        answers={questions.questions[step].answers}
+      />
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <button
+          onClick={() => {
+            setStep((curr) => curr - 1);
+          }}
+          disabled={step === 0}
+        >
+          Zurück
+        </button>
+        {step !== questions.questions.length - 1 ? (
+          <button
+            onClick={() => {
+              setStep((curr) => curr + 1);
+            }}
+            disabled={step >= questions.questions.length - 1}
+          >
+            Weiter
+          </button>
+        ) : (
+          <button>Auswerten</button>
+        )}
+      </div>
     </main>
   );
 };
