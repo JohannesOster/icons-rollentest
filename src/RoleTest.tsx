@@ -1,10 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
+import { useFieldArray, useForm } from "react-hook-form";
+import evaluationMatrix from "./evalutationMatrix";
 
 export const RoleTest = () => {
-  const [step, setStep] = useState<number>(0);
-  console.log(questions.questions.length, step);
+  const onSubmit = (values: any) => {
+    console.log("gets Submitted");
+    console.log(values);
+
+    const result = { pers1: 0, pres2: 0 };
+    /*
+      for each question
+        for each answer
+          result[evaluationMatrix[questionIdx][answerIdx]] += values[questionIdx][answerIdx]
+    */
+    console.log(evaluationMatrix, result);
+  };
+
+  const { register, handleSubmit, control } = useForm({
+    defaultValues: { questions: questions.questions.map(() => 0) },
+  });
+
+  const { fields } = useFieldArray({
+    control,
+    name: "questions",
+  });
+
   return (
     <main>
       <header>
@@ -38,33 +60,23 @@ export const RoleTest = () => {
         </p>
       </header>
       <hr />
-      <Question
-        id={step.toString()}
-        question={questions.questions[step].description}
-        answers={questions.questions[step].answers}
-      />
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button
-          onClick={() => {
-            setStep((curr) => curr - 1);
-          }}
-          disabled={step === 0}
-        >
-          Zurück
-        </button>
-        {step !== questions.questions.length - 1 ? (
-          <button
-            onClick={() => {
-              setStep((curr) => curr + 1);
-            }}
-            disabled={step >= questions.questions.length - 1}
-          >
-            Weiter
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {fields.map((item, index) => (
+          <Question
+            key={item.id}
+            ref={register()}
+            id={`questions[${index}]`}
+            defaultValue={item}
+            question={questions.questions[index].description}
+            answers={questions.questions[index].answers}
+          />
+        ))}
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <button type="submit" style={{ cursor: "pointer" }}>
+            Auswerten
           </button>
-        ) : (
-          <button>Auswerten</button>
-        )}
-      </div>
+        </div>
+      </form>
     </main>
   );
 };
