@@ -1,13 +1,13 @@
-import React, { FC, forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 interface Props {
   min?: number;
   max?: number;
   step?: number;
   name: string;
-  defaultValue: string;
+  defaultValue: number;
 }
-export const RatingGroup: FC<Props> = forwardRef(
+export const RatingGroup = forwardRef<HTMLInputElement, Props>(
   ({ min = 0, max = 10, step = 1, name, defaultValue }, ref) => {
     return (
       <div

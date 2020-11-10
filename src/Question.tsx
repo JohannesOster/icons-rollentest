@@ -1,13 +1,13 @@
-import React, { FC, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { RatingGroup } from "./RatingGroup";
 
 interface Props {
   id: string;
   question: string;
   answers: string[];
-  defaultValue?: string;
+  defaultValue?: number[];
 }
-export const Question: FC<Props> = forwardRef(
+export const Question = forwardRef<HTMLInputElement, Props>(
   ({ id, question, answers, defaultValue }, ref) => {
     return (
       <div>
