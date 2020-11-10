@@ -1,8 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
+import { useFieldArray, useForm } from "react-hook-form";
+import evaluationMatrix from "./evalutationMatrix";
 
 export const RoleTest = () => {
+  const [result, setResult] = useState<string | null>(null);
+
+  const onSubmit = (values: any) => {
+    const result = {
+      K: 0,
+      U: 0,
+      "N/E": 0,
+      B: 0,
+      M: 0,
+      "W/W": 0,
+      T: 0,
+      S: 0,
+      P: 0,
+    };
+    questions.questions.forEach((val, qIndex) => {
+      val.answers.forEach((ans, aIndex) => {
+        result[evaluationMatrix[qIndex][aIndex]] += +values.questions[qIndex][
+          aIndex
+        ];
+      });
+    });
+    const max = Object.entries(result).reduce(
+      (max, [key, value]) => {
+        if (max.value < value) {
+          max.key = key;
+          max.value = value;
+        }
+        return max;
+      },
+      { key: "", value: 0 }
+    );
+
+    setResult(max.key);
+  };
+
+  const { register, handleSubmit, control, formState } = useForm<{
+    questions: number[][];
+  }>({
+    mode: "onChange",
+    defaultValues: {
+      questions: questions.questions.map(() =>
+        Array(9)
+          .fill(0)
+          .map(() => 0)
+      ),
+    },
+  });
+
+  const { fields } = useFieldArray({
+    control,
+    name: "questions",
+  });
+
   return (
     <main>
       <header>
@@ -36,17 +91,33 @@ export const RoleTest = () => {
         </p>
       </header>
       <hr />
-      <ul>
-        {questions.questions.map((question, index) => (
-          <li key={index}>
-            <Question
-              id={index.toString()}
-              question={question.description}
-              answers={question.answers}
-            />
-          </li>
-        ))}
-      </ul>
+      {!result && (
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <ul>
+            {fields.map((item, index) => (
+              <li key={item.id}>
+                <Question
+                  ref={register()}
+                  id={`questions[${index}]`}
+                  defaultValue={item as number[]}
+                  question={questions.questions[index].description}
+                  answers={questions.questions[index].answers}
+                />
+              </li>
+            ))}
+          </ul>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button
+              type="submit"
+              style={{ cursor: "pointer" }}
+              disabled={!(formState.isDirty && formState.isValid)}
+            >
+              Auswerten
+            </button>
+          </div>
+        </form>
+      )}
+      {result && `Dein Ergebnis lautet ${result}`}
     </main>
   );
 };
