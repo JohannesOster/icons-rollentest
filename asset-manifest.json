@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/icons-rollentest/static/css/main.31d44bb1.chunk.css",
-    "main.js": "/icons-rollentest/static/js/main.d080fca0.chunk.js",
-    "main.js.map": "/icons-rollentest/static/js/main.d080fca0.chunk.js.map",
+    "main.js": "/icons-rollentest/static/js/main.6bfe5f5a.chunk.js",
+    "main.js.map": "/icons-rollentest/static/js/main.6bfe5f5a.chunk.js.map",
     "runtime-main.js": "/icons-rollentest/static/js/runtime-main.c9122c98.js",
     "runtime-main.js.map": "/icons-rollentest/static/js/runtime-main.c9122c98.js.map",
     "static/js/2.704accea.chunk.js": "/icons-rollentest/static/js/2.704accea.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.c9122c98.js",
     "static/js/2.704accea.chunk.js",
     "static/css/main.31d44bb1.chunk.css",
-    "static/js/main.d080fca0.chunk.js"
+    "static/js/main.6bfe5f5a.chunk.js"
   ]
 }
