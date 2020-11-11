@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Personalities, Question } from "./components";
+import { Personalities, Question } from "components";
 import { set } from "utils";
 import { questions, evaluationMatrix } from "data";
 

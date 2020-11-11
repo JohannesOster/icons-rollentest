@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { RoleTest } from "RoleTest";
+import { RoleTest } from "pages";
 
 const App = () => {
   return (
