@@ -43,6 +43,7 @@ export const RoleTest = () => {
     setResult(max.key);
   };
 
+  const [dirty, setDirty] = useState(questions.questions.map(() => false));
   const [error, setError] = useState<string | undefined>();
   const [values, setValues] = useState({
     questions: questions.questions.map(() =>
@@ -69,6 +70,10 @@ export const RoleTest = () => {
     const vals = values;
     set(vals, name, value);
     setValues({ ...vals });
+    setDirty((curr) => {
+      curr[step] = true;
+      return [...curr];
+    });
   };
 
   useEffect(() => {
@@ -110,7 +115,7 @@ export const RoleTest = () => {
       <hr />
       {!result && (
         <form onSubmit={onSubmit} style={{ display: "grid", rowGap: "12px" }}>
-          <span style={{ color: "red" }}>{error}</span>
+          <span style={{ color: "red" }}>{dirty[step] && error}</span>
           <Question
             id={`questions.${step}`}
             onChange={onChange}
