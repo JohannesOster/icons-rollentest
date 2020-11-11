@@ -23,6 +23,7 @@ export const Question = forwardRef<HTMLInputElement, Props>(
                   name={`${id}.${idx}`}
                   value={value[idx]}
                   id={id}
+                  style={{ maxWidth: "100px" }}
                 />
               </div>
             </li>
