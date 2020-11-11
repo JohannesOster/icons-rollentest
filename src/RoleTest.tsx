@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
 import evaluationMatrix from "./evalutationMatrix";
@@ -52,7 +52,7 @@ export const RoleTest = () => {
     ),
   });
 
-  const validate = () => {
+  const validate = useCallback(() => {
     const currSum = values.questions[step].reduce((sum, curr) => {
       return sum + +curr;
     }, 0);
@@ -61,7 +61,7 @@ export const RoleTest = () => {
     else if (currSum > 10)
       setError("Zu viel! Bitte vergeben Sie genau 10 Punkte.");
     else setError(undefined);
-  };
+  }, [values, setError, step]);
 
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -72,7 +72,7 @@ export const RoleTest = () => {
 
   useEffect(() => {
     validate();
-  }, [values, step]);
+  }, [values, step, validate]);
 
   return (
     <main>
