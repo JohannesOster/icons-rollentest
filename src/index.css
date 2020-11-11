@@ -36,9 +36,13 @@ button {
   transition: all 200ms;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   background: #333;
   color: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 input {
