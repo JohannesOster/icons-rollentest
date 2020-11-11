@@ -116,9 +116,13 @@ export const RoleTest = () => {
         </header>
       ) : (
         <>
-          Bitte verteile auf die folgenden Antwortealternativen exakt{" "}
-          <strong>10 Punkte</strong>
-          <hr />
+          {!result && (
+            <>
+              Bitte verteile auf die folgenden Antwortealternativen exakt{" "}
+              <strong>10 Punkte</strong>
+              <hr />
+            </>
+          )}
         </>
       )}
       {!result && (
