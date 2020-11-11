@@ -10,14 +10,10 @@ main {
 }
 
 ul {
-  list-style: decimal;
-}
-
-ul ul {
   list-style: lower-alpha;
 }
 
-ul ul li {
+ul li {
   padding: 12px 0;
 }
 .radio-container {

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
-import { useFieldArray, useForm } from "react-hook-form";
 import evaluationMatrix from "./evalutationMatrix";
+import { set } from "utils";
 
 export const RoleTest = () => {
   const [result, setResult] = useState<string | null>(null);
+  const [step, setStep] = useState(0);
 
-  const onSubmit = (values: any) => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+
     const result = {
       K: 0,
       U: 0,
@@ -38,25 +41,23 @@ export const RoleTest = () => {
     );
 
     setResult(max.key);
+    console.log(max.key);
   };
 
-  const { register, handleSubmit, control, formState } = useForm<{
-    questions: number[][];
-  }>({
-    mode: "onChange",
-    defaultValues: {
-      questions: questions.questions.map(() =>
-        Array(9)
-          .fill(0)
-          .map(() => 0)
-      ),
-    },
+  const [values, setValues] = useState({
+    questions: questions.questions.map(() =>
+      Array(9)
+        .fill(0)
+        .map(() => "")
+    ),
   });
 
-  const { fields } = useFieldArray({
-    control,
-    name: "questions",
-  });
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    const vals = values;
+    set(vals, name, value);
+    setValues({ ...vals });
+  };
 
   return (
     <main>
@@ -92,28 +93,42 @@ export const RoleTest = () => {
       </header>
       <hr />
       {!result && (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <ul>
-            {fields.map((item, index) => (
-              <li key={item.id}>
-                <Question
-                  ref={register()}
-                  id={`questions[${index}]`}
-                  defaultValue={item as number[]}
-                  question={questions.questions[index].description}
-                  answers={questions.questions[index].answers}
-                />
-              </li>
-            ))}
-          </ul>
+        <form onSubmit={onSubmit}>
+          <Question
+            id={`questions.${step}`}
+            onChange={onChange}
+            value={values.questions[step]}
+            question={
+              step.toString() + ". " + questions.questions[step].description
+            }
+            answers={questions.questions[step].answers}
+          />
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <button
-              type="submit"
-              style={{ cursor: "pointer" }}
-              disabled={!(formState.isDirty && formState.isValid)}
+              type="button"
+              onClick={(event) => {
+                event.preventDefault();
+                setStep((curr) => curr - 1);
+              }}
+              disabled={step === 0}
             >
-              Auswerten
+              Zurück
             </button>
+            {step < questions.questions.length - 1 ? (
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setStep((curr) => curr + 1);
+                }}
+              >
+                Weiter
+              </button>
+            ) : (
+              <button type="submit" style={{ cursor: "pointer" }}>
+                Auswerten
+              </button>
+            )}
           </div>
         </form>
       )}
