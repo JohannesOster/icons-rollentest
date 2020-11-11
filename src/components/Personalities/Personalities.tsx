@@ -91,7 +91,7 @@ export const Personalities = {
   K: () => (
     <>
       <p>
-        <strong>Koordinatoren</strong>gehören zu den kommunikationsorientierten
+        <strong>Koordinatoren</strong> gehören zu den kommunikationsorientierten
         Teamrollen. Sie treten in Erscheinung, wenn sich das Team auf die Ziele
         konzentrieren muss und wenn es darum geht, Teammitgliedern Aufgaben
         entsprechend ihren Neigungen zu übergeben, um einen Beitrag zum
@@ -174,7 +174,7 @@ export const Personalities = {
   "W/W": () => (
     <>
       <p>
-        <strong>Wegbereiter</strong>gehören zu den kommunikationsorientierten
+        <strong>Wegbereiter</strong> gehören zu den kommunikationsorientierten
         Teamrollen. Sie sind das Sprachorgan eines jeden Teams. Du trägst Ideen
         nach außen und knüpfst wertvolle Kontakte. Wenn das Team dem Risiko
         begegnet, in die Isolation zu geraten, wirst du aktiv.
