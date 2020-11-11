@@ -57,9 +57,8 @@ export const RoleTest = () => {
       return sum + +curr;
     }, 0);
 
-    if (currSum < 10) setError("Zu wenig! Bitte vergeben Sie genau 10 Punkte.");
-    else if (currSum > 10)
-      setError("Zu viel! Bitte vergeben Sie genau 10 Punkte.");
+    if (currSum < 10) setError("Zu wenig! Bitte vergib genau 10 Punkte.");
+    else if (currSum > 10) setError("Zu viel! Bitte vergib genau 10 Punkte.");
     else setError(undefined);
   }, [values, setError, step]);
 
@@ -111,10 +110,11 @@ export const RoleTest = () => {
         </header>
       ) : (
         <>
-          Bitte verteile auf die folgenden Antwortealternativen exakt 10 Punkte
+          Bitte verteile auf die folgenden Antwortealternativen exakt{" "}
+          <strong>10 Punkte</strong>
+          <hr />
         </>
       )}
-      <hr />
       {!result && (
         <form onSubmit={onSubmit} style={{ display: "grid", rowGap: "12px" }}>
           {step > 0 && (
@@ -129,6 +129,9 @@ export const RoleTest = () => {
               />
             </>
           )}
+          <div>
+            <hr />
+          </div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <button
               type="button"

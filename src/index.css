@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 body {
-  background: #333;
-  color: white;
   display: flex;
   justify-content: center;
   font-family: "Source Sans Pro";
 }
 
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
 main {
+  padding-top: 20px;
   max-width: 600px;
 }
 
@@ -21,4 +25,22 @@ ul li {
 }
 .radio-container {
   margin-top: 8px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 2px;
+  background: white;
+  border: 1px solid #333;
+  transition: all 200ms;
+}
+
+button:hover {
+  background: #333;
+  color: white;
+}
+
+input {
+  padding: 8px;
 }
