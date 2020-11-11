@@ -1,14 +1,14 @@
-import React, { forwardRef } from "react";
-import { RatingGroup } from "./RatingGroup";
+import React, { ChangeEvent, forwardRef } from "react";
 
 interface Props {
   id: string;
   question: string;
   answers: string[];
-  defaultValue?: number[];
+  value?: string[];
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 export const Question = forwardRef<HTMLInputElement, Props>(
-  ({ id, question, answers, defaultValue }, ref) => {
+  ({ id, question, answers, value = [], onChange }, ref) => {
     return (
       <div>
         {question}
@@ -17,10 +17,13 @@ export const Question = forwardRef<HTMLInputElement, Props>(
             <li key={idx}>
               <div style={{ display: "grid", rowGap: "8px" }}>
                 {answer}
-                <RatingGroup
-                  name={id + "." + idx}
-                  defaultValue={(defaultValue || [])[idx] || 0}
-                  ref={ref}
+                <input
+                  onChange={onChange}
+                  type="number"
+                  name={`${id}.${idx}`}
+                  value={value[idx]}
+                  id={id}
+                  style={{ maxWidth: "100px" }}
                 />
               </div>
             </li>
