@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Question, Personality } from "./components";
+import { Personalities, Question } from "./components";
 import { set } from "utils";
-import { personalities, questions, evaluationMatrix } from "data";
+import { questions, evaluationMatrix } from "data";
 
 export const RoleTest = () => {
   const [result, setResult] = useState<string | null>(null);
@@ -78,6 +78,8 @@ export const RoleTest = () => {
   useEffect(() => {
     validate();
   }, [values, step, validate]);
+
+  const Result = result ? Personalities[result] : <></>;
 
   return (
     <main>
@@ -157,7 +159,7 @@ export const RoleTest = () => {
           </div>
         </form>
       )}
-      {result && <Personality {...personalities[result]} />}
+      <Result />
     </main>
   );
 };
