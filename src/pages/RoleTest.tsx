@@ -4,7 +4,7 @@ import { set } from "utils";
 import { questions, evaluationMatrix } from "data";
 
 export const RoleTest = () => {
-  const [result, setResult] = useState<string | null>(null);
+  const [result, setResult] = useState<string[] | null>(null);
   const [step, setStep] = useState(0);
 
   const onSubmit = (event) => {
@@ -28,18 +28,12 @@ export const RoleTest = () => {
         ];
       });
     });
-    const max = Object.entries(result).reduce(
-      (max, [key, value]) => {
-        if (max.value < value) {
-          max.key = key;
-          max.value = value;
-        }
-        return max;
-      },
-      { key: "", value: 0 }
-    );
+    const max = Object.entries(result)
+      .sort(([, valueA], [, valueB]) => valueA - valueB)
+      .map(([key, _value]) => key)
+      .reverse();
 
-    setResult(max.key);
+    setResult(max);
   };
 
   const [dirty, setDirty] = useState(questions.map(() => false));
@@ -78,7 +72,19 @@ export const RoleTest = () => {
     validate();
   }, [values, step, validate]);
 
-  const Result = result ? Personalities[result] : () => <></>;
+  const Result = () => {
+    if (!result) return <></>;
+    const First = Personalities[result[0]];
+    const Second = Personalities[result[1]];
+    return (
+      <div>
+        <h2>Teamrolle</h2>
+        <First />
+        <h2>Sekundäre Teamrolle</h2>
+        <Second />
+      </div>
+    );
+  };
 
   return (
     <main>

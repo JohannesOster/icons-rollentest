@@ -117,10 +117,10 @@ export const Personalities = {
   B: () => (
     <>
       <p>
-        Der <strong>Beobachter</strong>
-        gehört zu den wissensorientierten Teamrollen. Er besticht durch sein
-        Auge der Logik, mit dem er die Optionen des Teams objektiv abzuwägen
-        weiß. Du bist in der Lage ein unparteiisches Urteil zu geben!
+        Der <strong>Beobachter</strong> gehört zu den wissensorientierten
+        Teamrollen. Er besticht durch sein Auge der Logik, mit dem er die
+        Optionen des Teams objektiv abzuwägen weiß. Du bist in der Lage ein
+        unparteiisches Urteil zu geben!
       </p>
       <p>
         Du bist nüchtern und strategisch, verschaffst dir einen Überblick und
@@ -147,10 +147,9 @@ export const Personalities = {
   T: () => (
     <>
       <p>
-        <strong>Teamarbeiter</strong>
-        gehören zu den kommunikationsorientierten Teamrollen. Sie sorgen für die
-        nötige Harmonie im Team. Du erledigst Aufgaben stets zum Vorteil des
-        gesamten Teams und bist hilfsbereit.
+        <strong>Teamarbeiter</strong> gehören zu den kommunikationsorientierten
+        Teamrollen. Sie sorgen für die nötige Harmonie im Team. Du erledigst
+        Aufgaben stets zum Vorteil des gesamten Teams und bist hilfsbereit.
       </p>
       <p>
         Du bist beliebt, kommunikativ und diplomatisch. Du sorgst für ein
@@ -199,10 +198,9 @@ export const Personalities = {
   "N/E": () => (
     <>
       <p>
-        <strong>Neuerer</strong>
-        gehören zu den wissensorientierten Teamrollen. Sie zeichnen sich durch
-        ihre außerordentliche Kreativität aus. Du löst Probleme auf einem
-        unkonventionellen Weg.
+        <strong>Neuerer</strong> gehören zu den wissensorientierten Teamrollen.
+        Sie zeichnen sich durch ihre außerordentliche Kreativität aus. Du löst
+        Probleme auf einem unkonventionellen Weg.
       </p>
       <p>
         Du bist introvertiert, kreativ und denkst unorthodox. Du bringst neue
