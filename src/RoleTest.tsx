@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Question } from "./Question";
 import * as questions from "./data.json";
 import evaluationMatrix from "./evalutationMatrix";
@@ -41,9 +41,9 @@ export const RoleTest = () => {
     );
 
     setResult(max.key);
-    console.log(max.key);
   };
 
+  const [error, setError] = useState<string | undefined>();
   const [values, setValues] = useState({
     questions: questions.questions.map(() =>
       Array(9)
@@ -52,12 +52,27 @@ export const RoleTest = () => {
     ),
   });
 
+  const validate = () => {
+    const currSum = values.questions[step].reduce((sum, curr) => {
+      return sum + +curr;
+    }, 0);
+
+    if (currSum < 10) setError("Zu wenig! Bitte vergeben Sie genau 10 Punkte.");
+    else if (currSum > 10)
+      setError("Zu viel! Bitte vergeben Sie genau 10 Punkte.");
+    else setError(undefined);
+  };
+
   const onChange = (event) => {
     const { name, value } = event.target;
     const vals = values;
     set(vals, name, value);
     setValues({ ...vals });
   };
+
+  useEffect(() => {
+    validate();
+  }, [values, step]);
 
   return (
     <main>
@@ -93,7 +108,8 @@ export const RoleTest = () => {
       </header>
       <hr />
       {!result && (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} style={{ display: "grid", rowGap: "12px" }}>
+          <span style={{ color: "red" }}>{error}</span>
           <Question
             id={`questions.${step}`}
             onChange={onChange}
@@ -121,6 +137,7 @@ export const RoleTest = () => {
                   event.preventDefault();
                   setStep((curr) => curr + 1);
                 }}
+                disabled={!!error}
               >
                 Weiter
               </button>
