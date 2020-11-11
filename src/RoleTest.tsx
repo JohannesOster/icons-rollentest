@@ -65,6 +65,7 @@ export const RoleTest = () => {
 
   const onChange = (event) => {
     const { name, value } = event.target;
+    if (value > 10) return;
     const vals = values;
     set(vals, name, value);
     setValues({ ...vals });
@@ -132,7 +133,7 @@ export const RoleTest = () => {
             </button>
             {step < questions.questions.length - 1 ? (
               <button
-                type="button"
+                type="submit"
                 onClick={(event) => {
                   event.preventDefault();
                   setStep((curr) => curr + 1);
