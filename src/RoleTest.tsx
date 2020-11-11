@@ -79,7 +79,7 @@ export const RoleTest = () => {
     validate();
   }, [values, step, validate]);
 
-  const Result = result ? Personalities[result] : <></>;
+  const Result = result ? Personalities[result] : () => <></>;
 
   return (
     <main>

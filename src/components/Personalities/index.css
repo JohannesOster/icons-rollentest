@@ -1,4 +1,5 @@
-ul {
+ul.positive,
+ul.negative {
   list-style: none;
 }
 ul.positive li::before {
