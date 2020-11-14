@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Personalities, Question } from "components";
 import { set } from "utils";
-import { questions, evaluationMatrix } from "data";
+import { questions, evaluationMatrix, personalityNames } from "data";
 
 export const RoleTest = () => {
   const [result, setResult] = useState<string[] | null>(null);
@@ -78,9 +78,9 @@ export const RoleTest = () => {
     const Second = Personalities[result[1]];
     return (
       <div>
-        <h2>Teamrolle</h2>
+        <h3>Teamrolle</h3>
         <First />
-        <h2>Sekundäre Teamrolle</h2>
+        <h3>Sekundäre Teamrolle</h3>
         <Second />
       </div>
     );
@@ -171,6 +171,16 @@ export const RoleTest = () => {
             )}
           </div>
         </form>
+      )}
+      {result && (
+        <div style={{ marginBottom: "20px" }}>
+          <h2>Ergebnis</h2>
+          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0]]}{" "}
+          ([%-Angabe])! Deine sekundäre Teamrolle ist{" "}
+          {personalityNames[result[1]]} ([%-Angabe]). Im Folgenden findest du
+          deine beiden Rollen sowie die damit einhergehenden Stärken und Risiken
+          beschrieben."
+        </div>
       )}
       <Result />
     </main>
