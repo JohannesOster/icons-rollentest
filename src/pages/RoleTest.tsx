@@ -28,9 +28,9 @@ export const RoleTest = () => {
         ];
       });
     });
+
     const max = Object.entries(result)
       .sort(([, valueA], [, valueB]) => valueA - valueB)
-      .map(([key, _value]) => key)
       .reverse();
 
     setResult(max);
@@ -74,8 +74,8 @@ export const RoleTest = () => {
 
   const Result = () => {
     if (!result) return <></>;
-    const First = Personalities[result[0]];
-    const Second = Personalities[result[1]];
+    const First = Personalities[result[0][0]];
+    const Second = Personalities[result[1][0]];
     return (
       <div>
         <h3>Teamrolle</h3>
@@ -175,11 +175,12 @@ export const RoleTest = () => {
       {result && (
         <div style={{ marginBottom: "20px" }}>
           <h2>Ergebnis</h2>
-          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0]]}{" "}
-          ([%-Angabe])! Deine sekundäre Teamrolle ist{" "}
-          {personalityNames[result[1]]} ([%-Angabe]). Im Folgenden findest du
-          deine beiden Rollen sowie die damit einhergehenden Stärken und Risiken
-          beschrieben."
+          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0][0]]} (
+          {(result[0][1] / (result[0][1] + result[1][1])) * 100}% )! Deine
+          sekundäre Teamrolle ist {personalityNames[result[1][0]]} (
+          {(result[1][1] / (result[0][1] + result[1][1])) * 100}%). Im Folgenden
+          findest du deine beiden Rollen sowie die damit einhergehenden Stärken
+          und Risiken beschrieben."
         </div>
       )}
       <Result />
