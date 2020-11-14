@@ -75,13 +75,10 @@ export const RoleTest = () => {
   const Result = () => {
     if (!result) return <></>;
     const First = Personalities[result[0][0]];
-    const Second = Personalities[result[1][0]];
     return (
       <div>
         <h3>Teamrolle</h3>
         <First />
-        <h3>Sekundäre Teamrolle</h3>
-        <Second />
       </div>
     );
   };
@@ -175,12 +172,9 @@ export const RoleTest = () => {
       {result && (
         <div style={{ marginBottom: "20px" }}>
           <h2>Ergebnis</h2>
-          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0][0]]} (
-          {(result[0][1] / (result[0][1] + result[1][1])) * 100}% )! Deine
-          sekundäre Teamrolle ist {personalityNames[result[1][0]]} (
-          {(result[1][1] / (result[0][1] + result[1][1])) * 100}%). Im Folgenden
-          findest du deine beiden Rollen sowie die damit einhergehenden Stärken
-          und Risiken beschrieben."
+          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0][0]]}.
+          Im Folgenden findest du deine beiden Rollen sowie die damit
+          einhergehenden Stärken und Risiken beschrieben."
         </div>
       )}
       <Result />
