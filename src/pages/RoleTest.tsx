@@ -173,8 +173,8 @@ export const RoleTest = () => {
         <div style={{ marginBottom: "20px" }}>
           <h2>Ergebnis</h2>
           Herzlichen Glückwunsch, du bist ein {personalityNames[result[0][0]]}.
-          Im Folgenden findest du deine beiden Rollen sowie die damit
-          einhergehenden Stärken und Risiken beschrieben."
+          Im Folgenden findest du deine Rollen sowie die damit einhergehenden
+          Stärken und Risiken beschrieben."
         </div>
       )}
       <Result />
