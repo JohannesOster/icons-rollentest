@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/icons-rollentest/static/css/main.f32fc9a6.chunk.css",
-    "main.js": "/icons-rollentest/static/js/main.471d8d2a.chunk.js",
-    "main.js.map": "/icons-rollentest/static/js/main.471d8d2a.chunk.js.map",
+    "main.css": "/icons-rollentest/static/css/main.057567da.chunk.css",
+    "main.js": "/icons-rollentest/static/js/main.a5222fc1.chunk.js",
+    "main.js.map": "/icons-rollentest/static/js/main.a5222fc1.chunk.js.map",
     "runtime-main.js": "/icons-rollentest/static/js/runtime-main.c9122c98.js",
     "runtime-main.js.map": "/icons-rollentest/static/js/runtime-main.c9122c98.js.map",
     "static/js/2.21221ca4.chunk.js": "/icons-rollentest/static/js/2.21221ca4.chunk.js",
     "static/js/2.21221ca4.chunk.js.map": "/icons-rollentest/static/js/2.21221ca4.chunk.js.map",
     "index.html": "/icons-rollentest/index.html",
-    "static/css/main.f32fc9a6.chunk.css.map": "/icons-rollentest/static/css/main.f32fc9a6.chunk.css.map",
+    "static/css/main.057567da.chunk.css.map": "/icons-rollentest/static/css/main.057567da.chunk.css.map",
     "static/js/2.21221ca4.chunk.js.LICENSE.txt": "/icons-rollentest/static/js/2.21221ca4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9122c98.js",
     "static/js/2.21221ca4.chunk.js",
-    "static/css/main.f32fc9a6.chunk.css",
-    "static/js/main.471d8d2a.chunk.js"
+    "static/css/main.057567da.chunk.css",
+    "static/js/main.a5222fc1.chunk.js"
   ]
 }
