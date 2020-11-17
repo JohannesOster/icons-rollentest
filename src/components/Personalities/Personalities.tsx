@@ -5,10 +5,10 @@ export const Personalities = {
   M: () => (
     <>
       <p>
-        <strong>Macher</strong> gehören zu den handlungsorientierten Teamrollen.
-        Sie sind diejenigen, die sicherstellen, dass sich das Team bewegt und
-        nicht das gewünschte Ergebnis aus den Augen verliert. Als fordernde
-        Person lieferst du dazu den Antrieb.
+        Macher gehören zu den handlungsorientierten Teamrollen. Sie sind
+        diejenigen, die sicherstellen, dass sich das Team bewegt und nicht das
+        gewünschte Ergebnis aus den Augen verliert. Als fordernde Person
+        lieferst du dazu den Antrieb.
       </p>
       <p>
         Du bist dynamisch und voller Energie. Du arbeitest konzentriert und
@@ -54,9 +54,9 @@ export const Personalities = {
   U: () => (
     <>
       <p>
-        <strong>Umsetzer</strong> gehören zu den handlungsorientierten
-        Teamrollen. Sie setzen an, wenn praktische Schritte geplant und so
-        wirksam wie nur möglich durchgeführt werden müssen.
+        Umsetzer gehören zu den handlungsorientierten Teamrollen. Sie setzen an,
+        wenn praktische Schritte geplant und so wirksam wie nur möglich
+        durchgeführt werden müssen.
       </p>
       <p>
         Du bist zuverlässig, effizient und diszipliniert. Du brauchst stabile
@@ -89,11 +89,10 @@ export const Personalities = {
   P: () => (
     <>
       <p>
-        Der <strong>Perfektionist</strong> gehört zu den handlungsorientierten
-        Teamrollen. Er hat seinen eindrucksvollen Glanzmoment am Ende einer
-        Aufgabenstellung, wenn er das Ergebnis noch einmal aufpoliert und die
-        Arbeit auf mögliche Fehler untersucht. Du setzt stets einen sehr hohen
-        Qualitätsanspruch!
+        Der Perfektionist gehört zu den handlungsorientierten Teamrollen. Er hat
+        seinen eindrucksvollen Glanzmoment am Ende einer Aufgabenstellung, wenn
+        er das Ergebnis noch einmal aufpoliert und die Arbeit auf mögliche
+        Fehler untersucht. Du setzt stets einen sehr hohen Qualitätsanspruch!
       </p>
       <p>
         Du bist genau, pünktlich, zuverlässig, gewissenhaft, aber kannst auch
@@ -127,11 +126,11 @@ export const Personalities = {
   K: () => (
     <>
       <p>
-        <strong>Koordinatoren</strong> gehören zu den kommunikationsorientierten
-        Teamrollen. Sie treten in Erscheinung, wenn sich das Team auf die Ziele
-        konzentrieren muss und wenn es darum geht, Teammitgliedern Aufgaben
-        entsprechend ihren Neigungen zu übergeben, um einen Beitrag zum
-        Teamerfolg leisten zu können.
+        Koordinatoren gehören zu den kommunikationsorientierten Teamrollen. Sie
+        treten in Erscheinung, wenn sich das Team auf die Ziele konzentrieren
+        muss und wenn es darum geht, Teammitgliedern Aufgaben entsprechend ihren
+        Neigungen zu übergeben, um einen Beitrag zum Teamerfolg leisten zu
+        können.
       </p>
       <p>
         Du bist selbstsicher, entschlusskräftig, kommunikativ und kannst gut
@@ -163,10 +162,9 @@ export const Personalities = {
   B: () => (
     <>
       <p>
-        Der <strong>Beobachter</strong> gehört zu den wissensorientierten
-        Teamrollen. Er besticht durch sein Auge der Logik, mit dem er die
-        Optionen des Teams objektiv abzuwägen weiß. Du bist in der Lage ein
-        unparteiisches Urteil zu geben!
+        Der Beobachter gehört zu den wissensorientierten Teamrollen. Er besticht
+        durch sein Auge der Logik, mit dem er die Optionen des Teams objektiv
+        abzuwägen weiß. Du bist in der Lage ein unparteiisches Urteil zu geben!
       </p>
       <p>
         Du bist nüchtern und strategisch, verschaffst dir einen Überblick und
@@ -200,9 +198,9 @@ export const Personalities = {
   T: () => (
     <>
       <p>
-        <strong>Teamarbeiter</strong> gehören zu den kommunikationsorientierten
-        Teamrollen. Sie sorgen für die nötige Harmonie im Team. Du erledigst
-        Aufgaben stets zum Vorteil des gesamten Teams und bist hilfsbereit.
+        Teamarbeiter gehören zu den kommunikationsorientierten Teamrollen. Sie
+        sorgen für die nötige Harmonie im Team. Du erledigst Aufgaben stets zum
+        Vorteil des gesamten Teams und bist hilfsbereit.
       </p>
       <p>
         Du bist beliebt, kommunikativ und diplomatisch. Du sorgst für ein
@@ -238,10 +236,10 @@ export const Personalities = {
   "W/W": () => (
     <>
       <p>
-        <strong>Wegbereiter</strong> gehören zu den kommunikationsorientierten
-        Teamrollen. Sie sind das Sprachorgan eines jeden Teams. Du trägst Ideen
-        nach außen und knüpfst wertvolle Kontakte. Wenn das Team Gefahr läuft,
-        in die Isolation zu geraten, wirst du aktiv.
+        Wegbereiter gehören zu den kommunikationsorientierten Teamrollen. Sie
+        sind das Sprachorgan eines jeden Teams. Du trägst Ideen nach außen und
+        knüpfst wertvolle Kontakte. Wenn das Team Gefahr läuft, in die Isolation
+        zu geraten, wirst du aktiv.
       </p>
       <p>
         Du bist extravertiert, enthusiastisch und gesellig. Du schließt schnell
@@ -274,9 +272,9 @@ export const Personalities = {
   "N/E": () => (
     <>
       <p>
-        <strong>Neuerer</strong> gehören zu den wissensorientierten Teamrollen.
-        Sie zeichnen sich durch ihre außerordentliche Kreativität und Phantasie
-        aus. Du löst Probleme auf einem unkonventionellen Weg.
+        Neuerer gehören zu den wissensorientierten Teamrollen. Sie zeichnen sich
+        durch ihre außerordentliche Kreativität und Phantasie aus. Du löst
+        Probleme auf einem unkonventionellen Weg.
       </p>
       <p>
         Du bist introvertiert, kreativ und denkst unorthodox. Du bringst neue
@@ -312,10 +310,9 @@ export const Personalities = {
   S: () => (
     <>
       <p>
-        Der <strong>Spezialist</strong> gehört zu den wissensorientierten
-        Teamrollen. Tiefes Fachwissen ist für einen Teamerfolg unerlässlich –
-        und damit kann der Spezialist stets dienen! Du bist ein wandelndes
-        Fachbuch.
+        Der Spezialist gehört zu den wissensorientierten Teamrollen. Tiefes
+        Fachwissen ist für einen Teamerfolg unerlässlich – und damit kann der
+        Spezialist stets dienen! Du bist ein wandelndes Fachbuch.
       </p>
       <p>
         Du bist in deinem Fachgebiet belesen, engagiert und richtest dein

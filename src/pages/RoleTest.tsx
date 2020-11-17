@@ -76,12 +76,7 @@ export const RoleTest = () => {
   const Result = () => {
     if (!result) return <></>;
     const First = Personalities[result[0][0]];
-    return (
-      <div>
-        <h3>Teamrolle</h3>
-        <First />
-      </div>
-    );
+    return <First />;
   };
 
   return (
@@ -177,9 +172,10 @@ export const RoleTest = () => {
       {result && (
         <div style={{ marginBottom: "20px" }}>
           <h2>Ergebnis</h2>
-          Herzlichen Glückwunsch, du bist ein {personalityNames[result[0][0]]}.
-          Im Folgenden findest du deine Rollen sowie die damit einhergehenden
-          Stärken und Risiken beschrieben."
+          Herzlichen Glückwunsch, du bist ein{" "}
+          <strong>{personalityNames[result[0][0]]}</strong>. Im Folgenden
+          findest du deine Rolle sowie die damit einhergehenden Stärken und
+          Risiken beschrieben.
         </div>
       )}
       <Result />
@@ -217,9 +213,9 @@ export const RoleTest = () => {
               Wenn du dich selbst kennst und deine Mitmenschen kennst, brauchst
               du das Ergebnis von 100 Schlachten nicht zu fürchten.
             </q>
-            Unabhängig von deinem Ergebnis ist jedoch das wichtigste,
+            Unabhängig von deinem Ergebnis ist jedoch das Wichtigste,
             anzuerkennen, dass es verschiedene Rollen in einer Gruppenarbeit
-            gibt und dass jede davon wichtig ist und ihren wertvollen Beitrag
+            gibt und dass jede davon essentiell ist und ihren wertvollen Beitrag
             liefert. Leicht entsteht in der Praxis der Eindruck, dass der
             „Anführer“ (hier am ehesten gleichzusetzen mit dem Koordinator) eine
             gesonderte Autorität zu genießen hat; Befehlsgewalt wird mit
