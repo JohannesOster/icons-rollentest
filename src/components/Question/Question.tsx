@@ -22,7 +22,6 @@ export const Question = forwardRef<HTMLInputElement, Props>(
                   type="number"
                   name={`${id}.${idx}`}
                   value={value[idx]}
-                  id={id}
                   style={{ maxWidth: "100px" }}
                 />
               </div>
