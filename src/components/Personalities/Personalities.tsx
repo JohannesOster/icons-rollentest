@@ -176,17 +176,25 @@ export const Personalities = {
         dir schwer damit, andere zu motivieren. Du kannst als herablassend
         empfunden werden.
       </p>
-      <ul className={styles.negative}>
-        <li>können andere kaum inspirieren</li>
-        <li>neigen dazu, nach Kritik das Interesse gänzlich zu verlieren</li>
-        <li>können als taktlos und herablassend empfunden werden</li>
-      </ul>
-      <ul className={styles.positive}>
-        <li>berücksichtigen alle relevanten Möglichkeiten</li>
-        <li>verfügen über gutes Urteilsvermögen</li>
-        <li>untersuchen Vorschläge auf Machbarkeit</li>
-        <li>strategisch und kritisch</li>
-      </ul>
+      <p>
+        <h4>Häufige Stärken &amp; Schwächen</h4>
+        <ul className={styles.negative}>
+          <li>können andere kaum inspirieren</li>
+          <li>neigen dazu, nach Kritik das Interesse gänzlich zu verlieren</li>
+          <li>können als taktlos und herablassend empfunden werden</li>
+        </ul>
+        <ul className={styles.positive}>
+          <li>berücksichtigen alle relevanten Möglichkeiten</li>
+          <li>verfügen über gutes Urteilsvermögen</li>
+          <li>untersuchen Vorschläge auf Machbarkeit</li>
+          <li>strategisch und kritisch</li>
+        </ul>
+      </p>
+      <p>
+        <h4>Einsatzbereich</h4>
+        Der Beobachter sollte darauf achten, dass seine Meinung gehört wird.
+        Dies gelingt, indem er versucht, weniger zynisch und skeptisch zu sein.
+      </p>
     </>
   ),
   T: () => (
