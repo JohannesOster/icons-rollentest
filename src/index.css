@@ -33,9 +33,6 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-ul ~ ul {
-  margin-top: 12px;
-}
 
 ul li {
   padding: 6px 0;

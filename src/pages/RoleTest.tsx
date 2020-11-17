@@ -82,7 +82,7 @@ export const RoleTest = () => {
         <First />
         <div
           style={{
-            fontSize: "90%",
+            fontSize: "80%",
             display: "grid",
             rowGap: "14px",
             marginTop: "20px",
