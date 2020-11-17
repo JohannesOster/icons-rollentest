@@ -76,13 +76,33 @@ export const RoleTest = () => {
   const Result = () => {
     if (!result) return <></>;
     const First = Personalities[result[0][0]];
-    return <First />;
+    const Second = Personalities[result[1][0]];
+    return (
+      <div style={{ display: "grid", rowGap: "14px" }}>
+        <First />
+        <div
+          style={{
+            fontSize: "90%",
+            display: "grid",
+            rowGap: "14px",
+            marginTop: "20px",
+            marginBottom: "20px",
+          }}
+        >
+          <p>
+            Deine sekundäre (also weniger stark ausgeprägte) Teamrolle ist{" "}
+            <strong>{personalityNames[result[0][0]]}</strong>.
+          </p>
+          <Second />
+        </div>
+      </div>
+    );
   };
 
   return (
     <main>
       {step === 0 ? (
-        <header>
+        <header style={{ display: "grid", rowGap: "8px" }}>
           <h2>Teamrollen-Selbsteinschätzung</h2>
           <p>
             Folgender Test, der auf Annahmen des Psychologen Meredith Belbin
@@ -105,6 +125,7 @@ export const RoleTest = () => {
             Entscheidungen ist also angemessen!
           </p>
           <p>
+            <br />
             Viel Spaß! <br />
             Janosch &amp; Johannes
           </p>
@@ -181,7 +202,9 @@ export const RoleTest = () => {
       <Result />
       {result && (
         <>
-          <h3>Was nützt mir die Kenntnis meiner Teamrolle?</h3>
+          <h3 style={{ marginTop: "20px" }}>
+            Was nützt mir die Kenntnis meiner Teamrolle?
+          </h3>
           <p>
             Psychologische Tests haben häufig den faden Beigeschmack, das
             Offensichtliche zurückzuspiegeln. Jedoch liegt in genau diesem
