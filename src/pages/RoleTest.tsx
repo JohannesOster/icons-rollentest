@@ -240,18 +240,17 @@ export const RoleTest = () => {
             anzuerkennen, dass es verschiedene Rollen in einer Gruppenarbeit
             gibt und dass jede davon essentiell ist und ihren wertvollen Beitrag
             liefert. Leicht entsteht in der Praxis der Eindruck, dass der
-            „Anführer“ (hier am ehesten gleichzusetzen mit dem Koordinator) eine
-            gesonderte Autorität zu genießen hat; Befehlsgewalt wird mit
-            Hierarchie gleichgesetzt. Dieses hierarchische Gefälle wird
-            vielerorts in der Wirtschaftswelt auch weiterhin gepflegt,
-            perpetuiert und mit sozialem Prestige sowie finanzieller Entlohnung
-            quittiert. Dabei wird verkannt, dass eine Rollenverteilung gemäß den
-            Erfordernissen der Situation einerseits und individuellen Stärken
-            andererseits die Voraussetzung für das Gelingen jeglichen sozialen
-            Prozesses ist. Keine Gruppenaufgabe kann funktionieren, wenn das
-            Team nur aus Bestimmern besteht. Für ein Theaterstück sind
-            Bühnenbildner, Maske, Nebenfiguren, Regie und Antagonist ebenso
-            essentiell wie der Held.
+            „Anführer“ (entspricht am ehesten dem Koordinator) eine gesonderte
+            Autorität zu genießen hat; Befehlsgewalt wird mit Hierarchie
+            gleichgesetzt. Dieses hierarchische Gefälle wird vielerorts in der
+            Wirtschaftswelt auch weiterhin gepflegt, perpetuiert und mit
+            sozialem Prestige sowie finanzieller Entlohnung quittiert. Dabei
+            wird verkannt, dass eine Rollenverteilung gemäß den Erfordernissen
+            der Situation einerseits und individuellen Stärken andererseits die
+            Voraussetzung für das Gelingen jeglichen sozialen Prozesses ist.
+            Keine Gruppenaufgabe kann funktionieren, wenn das Team nur aus
+            Bestimmern besteht. Für ein Theaterstück sind Bühnenbildner, Maske,
+            Nebenfiguren, Regie und Antagonist ebenso essentiell wie der Held.
           </p>
         </>
       )}
