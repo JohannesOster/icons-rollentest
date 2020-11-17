@@ -108,8 +108,10 @@ export const RoleTest = () => {
             Antwortmöglichkeiten viele Punkte. Je stärker die Punkte aufgeteilt
             werden, desto unklarer fällt das Ergebnis aus. Mut zu klaren
             Entscheidungen ist also angemessen!
-            <br />
-            Viel Spaß! Janosch &amp; Johannes
+          </p>
+          <p>
+            Viel Spaß! <br />
+            Janosch &amp; Johannes
           </p>
         </header>
       ) : (
