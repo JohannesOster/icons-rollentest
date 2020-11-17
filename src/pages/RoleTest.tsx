@@ -183,7 +183,7 @@ export const RoleTest = () => {
       <Result />
       {result && (
         <>
-          <h2>Was nützt mir die Kenntnis meiner Teamrolle?</h2>
+          <h3>Was nützt mir die Kenntnis meiner Teamrolle?</h3>
           <p>
             Psychologische Tests haben häufig den faden Beigeschmack, das
             Offensichtliche zurückzuspiegeln. Jedoch liegt in genau diesem
