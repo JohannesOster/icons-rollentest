@@ -324,18 +324,21 @@ export const Personalities = {
         Allerdings neigst du dazu, dich in technischen Einzelheiten zu verlieren
         und trittst in der Rolle einer Informationsquelle auf.
       </p>
-      <ul className={styles.negative}>
-        <li>verlieren sich in technischen Einzelheiten</li>
-        <li>leisten nur informative Beiträge</li>
-      </ul>
-      <ul className={styles.positive}>
-        <li>
-          formulieren generelle Aussagen in die technisch konkreten
-          Bezeichnungen um
-        </li>
-        <li>leisten professionellen Beitrag zum jeweiligen Thema</li>
-        <li>brennen für ihr Fachgebiet</li>
-      </ul>
+      <p>
+        <h4>Einsatzbereich</h4>
+        <ul className={styles.negative}>
+          <li>verlieren sich in technischen Einzelheiten</li>
+          <li>leisten nur informative Beiträge</li>
+        </ul>
+        <ul className={styles.positive}>
+          <li>
+            formulieren generelle Aussagen in die technisch konkreten
+            Bezeichnungen um
+          </li>
+          <li>leisten professionellen Beitrag zum jeweiligen Thema</li>
+          <li>brennen für ihr Fachgebiet</li>
+        </ul>
+      </p>
       <p>
         <h4>Einsatzgebiet</h4>
         Die Funktion der Spezialisten besteht darin, Informationsdefizite des
