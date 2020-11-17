@@ -322,7 +322,7 @@ export const Personalities = {
         und trittst in der Rolle einer Informationsquelle auf.
       </p>
       <p>
-        <h4>Einsatzbereich</h4>
+        <h4>Häufige Stärken &amp; Schwächen</h4>{" "}
         <ul className={styles.negative}>
           <li>verlieren sich in technischen Einzelheiten</li>
           <li>leisten nur informative Beiträge</li>
