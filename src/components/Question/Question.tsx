@@ -23,6 +23,9 @@ export const Question = forwardRef<HTMLInputElement, Props>(
                   name={`${id}.${idx}`}
                   value={value[idx]}
                   style={{ maxWidth: "100px" }}
+                  onWheel={(event) => {
+                    (event.target as any).blur();
+                  }}
                 />
               </div>
             </li>

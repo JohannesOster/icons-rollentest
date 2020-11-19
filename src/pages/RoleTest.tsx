@@ -59,7 +59,7 @@ export const RoleTest = () => {
 
   const onChange = (event) => {
     const { name, value } = event.target;
-    if (value > 10) return;
+    if (value > 10 || value < 0) return;
     const vals = values;
     set(vals, name, value);
     setValues({ ...vals });
