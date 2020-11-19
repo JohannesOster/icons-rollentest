@@ -91,7 +91,7 @@ export const RoleTest = () => {
         >
           <p>
             Deine sekundäre (also weniger stark ausgeprägte) Teamrolle ist{" "}
-            <strong>{personalityNames[result[0][0]]}</strong>.
+            <strong>{personalityNames[result[0][1]]}</strong>.
           </p>
           <Second />
         </div>
